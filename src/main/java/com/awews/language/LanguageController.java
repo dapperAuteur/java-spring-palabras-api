@@ -24,9 +24,9 @@ public class LanguageController {
 		return languageService.getLanguageById(id);
 	}
 	
-	@RequestMapping("/api/ver0001/languages/name/{spanishSlug}")
-	public Language getLanguageBySpanishSlug(@PathVariable String spanishSlug) {
-		return languageService.getLanguageBySpanishSlug(spanishSlug);
+	@RequestMapping("/api/ver0001/languages/name/{languageSlug}")
+	public Language getLanguageByLanguageSlug(@PathVariable String languageSlug) {
+		return languageService.getLanguageByLanguageSlug(languageSlug);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/languages")

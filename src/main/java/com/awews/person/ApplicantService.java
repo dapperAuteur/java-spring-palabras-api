@@ -25,9 +25,9 @@ public class ApplicantService {
 	}
 	
 //	doesn't work
-	public Applicant getApplicantBySpanishSlug(String spanishSlug) {
-//		return applicants.stream().filter(n -> n.getSpanishSlug().equals(spanishSlug)).findFirst().get();
-		return applicantRepository.findOne(spanishSlug);
+	public Applicant getApplicantByEmailSlug(String emailSlug) {
+//		return applicants.stream().filter(n -> n.getEmailSlug().equals(emailSlug)).findFirst().get();
+		return applicantRepository.findOne(emailSlug);
 		
 	}
 

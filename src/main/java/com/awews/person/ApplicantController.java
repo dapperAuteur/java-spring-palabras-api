@@ -24,9 +24,9 @@ public class ApplicantController {
 		return applicantService.getApplicantById(id);
 	}
 	
-	@RequestMapping("/api/ver0001/applicants/name/{spanishSlug}")
-	public Applicant getApplicantBySpanishSlug(@PathVariable String spanishSlug) {
-		return applicantService.getApplicantBySpanishSlug(spanishSlug);
+	@RequestMapping("/api/ver0001/applicants/name/{emailSlug}")
+	public Applicant getApplicantByEmailSlug(@PathVariable String emailSlug) {
+		return applicantService.getApplicantByEmailSlug(emailSlug);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/applicants")

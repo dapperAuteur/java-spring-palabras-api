@@ -25,9 +25,9 @@ public class LanguageService {
 	}
 	
 //	doesn't work
-	public Language getLanguageBySpanishSlug(String spanishSlug) {
-//		return languages.stream().filter(n -> n.getSpanishSlug().equals(spanishSlug)).findFirst().get();
-		return languageRepository.findOne(spanishSlug);
+	public Language getLanguageByLanguageSlug(String languageSlug) {
+//		return languages.stream().filter(n -> n.getLanguageSlug().equals(spanishSlug)).findFirst().get();
+		return languageRepository.findOne(languageSlug);
 		
 	}
 

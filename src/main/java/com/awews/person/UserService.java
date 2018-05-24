@@ -25,9 +25,9 @@ public class UserService {
 	}
 	
 //	doesn't work
-	public User getUserBySpanishSlug(String spanishSlug) {
-//		return users.stream().filter(n -> n.getSpanishSlug().equals(spanishSlug)).findFirst().get();
-		return userRepository.findOne(spanishSlug);
+	public User getUserByEmailSlug(String emailSlug) {
+//		return users.stream().filter(n -> n.getUserByUsernameSlug().equals(emailSlug)).findFirst().get();
+		return userRepository.findOne(emailSlug);
 		
 	}
 

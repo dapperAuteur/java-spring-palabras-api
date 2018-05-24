@@ -24,9 +24,9 @@ public class UserController {
 		return userService.getUserById(id);
 	}
 	
-	@RequestMapping("/api/ver0001/users/name/{spanishSlug}")
-	public User getUserBySpanishSlug(@PathVariable String spanishSlug) {
-		return userService.getUserBySpanishSlug(spanishSlug);
+	@RequestMapping("/api/ver0001/users/email/{emailSlug}")
+	public User getUserByEmailSlug(@PathVariable String emailSlug) {
+		return userService.getUserByEmailSlug(emailSlug);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/users")

@@ -25,9 +25,9 @@ public class FormService {
 	}
 	
 //	doesn't work
-	public Form getFormBySpanishSlug(String spanishSlug) {
-//		return forms.stream().filter(n -> n.getSpanishSlug().equals(spanishSlug)).findFirst().get();
-		return formRepository.findOne(spanishSlug);
+	public Form getFormByFormSlug(String formSlug) {
+//		return forms.stream().filter(n -> n.getFormByFormSlug().equals(formSlug)).findFirst().get();
+		return formRepository.findOne(formSlug);
 		
 	}
 

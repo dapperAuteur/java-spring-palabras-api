@@ -24,9 +24,9 @@ public class FormController {
 		return formService.getFormById(id);
 	}
 	
-	@RequestMapping("/api/ver0001/forms/name/{spanishSlug}")
-	public Form getFormBySpanishSlug(@PathVariable String spanishSlug) {
-		return formService.getFormBySpanishSlug(spanishSlug);
+	@RequestMapping("/api/ver0001/forms/name/{formSlug}")
+	public Form getFormByFormSlug(@PathVariable String formSlug) {
+		return formService.getFormByFormSlug(formSlug);
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/forms")
