@@ -43,14 +43,14 @@ public class ResponseController {
 		return response;
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT, value="/api/ver0001/applicants/{applicantId}/submissions/{id}")
+	@RequestMapping(method=RequestMethod.PUT, value="/api/ver0001/applicants/{applicantId}/responses/{id}")
 	public Response updateResponse(@RequestBody Response response, @PathVariable String applicantId, @PathVariable String id) {
 		response.setApplicant(new Applicant(applicantId, "", "", "", "", "", "", "", "", "", ""));
 		responseService.updateResponse(id, response);
 		return response;
 	}
 	
-	@RequestMapping(method=RequestMethod.DELETE, value="/api/ver0001/applicants/{applicantId}/submissions/{id}")
+	@RequestMapping(method=RequestMethod.DELETE, value="/api/ver0001/applicants/{applicantId}/responses/{id}")
 	public void deleteResponse(@PathVariable String id) {
 		responseService.deleteResponse(id);
 

@@ -30,7 +30,7 @@ public class QuestionController {
 //		return questionService.getQuestionByQuestionSlug(questionSlug);
 //	}
 	
-	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/forms/{id}/questions")
+	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/forms/{formId}/questions")
 	public Question addQuestion(@RequestBody Question question, @PathVariable String formId) {
 		question.setForm(new Form(formId, "", "", ""));
 		questionService.addQuestion(question);

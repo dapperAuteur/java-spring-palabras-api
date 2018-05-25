@@ -15,6 +15,7 @@ public class QuestionService {
 		List<Question> questions = new ArrayList<>();
 		questionRepository.findByFormId(formId)
 			.forEach(questions::add);
+		System.out.println(questions);
 		return questions;
 	}
 	
