@@ -1,8 +1,9 @@
-package com.awews.form;
+package com.awews.form.response;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.awews.form.Form;
 import com.awews.language.Language;
 import com.awews.person.Applicant;
 

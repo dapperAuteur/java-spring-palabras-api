@@ -1,4 +1,4 @@
-package com.awews.form;
+package com.awews.form.response;
 
 import java.util.List;
 
