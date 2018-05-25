@@ -41,13 +41,6 @@ public class FormController {
 		return form;
 	}
 	
-//	@RequestMapping(method=RequestMethod.DELETE, value="/forms/{id}")
-//	public Course deleteForm(@PathVariable String id) {
-//		formService.deleteForm(id);
-//		Course form = null;
-//		return form;
-//	}
-	
 	@RequestMapping(method=RequestMethod.DELETE, value="/api/ver0001/forms/{id}")
 	public void deleteForm(@PathVariable String id) {
 		formService.deleteForm(id);

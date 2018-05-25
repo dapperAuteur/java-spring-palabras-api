@@ -41,13 +41,6 @@ public class UserController {
 		return user;
 	}
 	
-//	@RequestMapping(method=RequestMethod.DELETE, value="/users/{id}")
-//	public Course deleteUser(@PathVariable String id) {
-//		userService.deleteUser(id);
-//		Course user = null;
-//		return user;
-//	}
-	
 	@RequestMapping(method=RequestMethod.DELETE, value="/api/ver0001/users/{id}")
 	public void deleteUser(@PathVariable String id) {
 		userService.deleteUser(id);
