@@ -11,9 +11,17 @@ public class QuestionService {
 	@Autowired
 	private QuestionRepository questionRepository;
 	
-	public List<Question> getAllQuestions(String formId) {
+//	public List<Question> getAllQuestions(String formId) {
+//		List<Question> questions = new ArrayList<>();
+//		questionRepository.findByFormId(formId)
+//			.forEach(questions::add);
+//		System.out.println(questions);
+//		return questions;
+//	}
+	
+	public List<Question> getAllQuestions() {
 		List<Question> questions = new ArrayList<>();
-		questionRepository.findByFormId(formId)
+		questionRepository.findAll()
 			.forEach(questions::add);
 		System.out.println(questions);
 		return questions;

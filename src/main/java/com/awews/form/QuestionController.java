@@ -14,9 +14,14 @@ public class QuestionController {
 	@Autowired
 	private QuestionService questionService;
 	
-	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/forms/{id}/questions")
-	public List<Question> getAllQuestions(@PathVariable String id) {
-		return questionService.getAllQuestions(id);
+//	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/forms/{id}/questions")
+//	public List<Question> getAllQuestions(@PathVariable String id) {
+//		return questionService.getAllQuestions(id);
+//	}
+	
+	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/questions")
+	public List<Question> getAllQuestions(){
+		return questionService.getAllQuestions();
 	}
 	
 	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/forms/{formId}/questions/{id}")
