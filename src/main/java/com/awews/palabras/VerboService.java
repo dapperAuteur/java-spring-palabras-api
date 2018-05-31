@@ -19,6 +19,10 @@ public class VerboService {
 		return verbos;
 	}
 	
+	public Verbo getVerboBySpanish(String spanish) {
+		return verboRepository.findBySpanish(spanish);
+	}
+	
 	public Verbo getVerboById(String id) {
 //		return verbos.stream().filter(t -> t.getId().equals(id)).findFirst().get();
 		return verboRepository.findOne(id);

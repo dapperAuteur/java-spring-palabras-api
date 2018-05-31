@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface QuestionRepository extends MongoRepository<Question, String> {
 	
-	public List<Question> findByFormId (String formId);
+	public List<Question> findByForm (Form form);
 
 }

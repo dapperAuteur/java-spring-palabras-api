@@ -19,6 +19,11 @@ public class QuestionController {
 //		return questionService.getAllQuestions(id);
 //	}
 	
+	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/forms/{formId}/questions")
+	public List<Question> getQuestionsByFormId(@PathVariable String formId) {
+		return questionService.getQuestionsByFormId(formId);
+	}
+	
 	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/questions")
 	public List<Question> getAllQuestions(){
 		return questionService.getAllQuestions();

@@ -24,6 +24,11 @@ public class VerboController {
 		return verboService.getVerboById(id);
 	}
 	
+	@RequestMapping("/api/ver0001/verbos/spanish/{spanish}")
+	public Verbo getVerboBySpanish(@PathVariable String spanish) {
+		return verboService.getVerboBySpanish(spanish);
+	}
+	
 	@RequestMapping("/api/ver0001/verbos/name/{spanishSlug}")
 	public Verbo getVerboBySpanishSlug(@PathVariable String spanishSlug) {
 		return verboService.getVerboBySpanishSlug(spanishSlug);
