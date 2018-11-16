@@ -11,6 +11,7 @@ public class Question {
 	private String questionText;
 	private String pageOnForm;
 	private String partOfForm;
+	private String placement;
 	private String questionNumber;
 	
 	private QuestionType questionType;
@@ -26,17 +27,19 @@ public class Question {
 	 * @param questionText
 	 * @param pageOnForm
 	 * @param partOfForm
+	 * @param placement
 	 * @param questionNumber
 	 * @param questionType
 	 * @param form
 	 */
-	public Question(String id, String questionText, String pageOnForm, String partOfForm, String questionNumber,
-			QuestionType questionType, Form form) {
+	public Question(String id, String questionText, String pageOnForm, String partOfForm, String placement,
+			String questionNumber, QuestionType questionType, Form form) {
 		super();
 		this.id = id;
 		this.questionText = questionText;
 		this.pageOnForm = pageOnForm;
 		this.partOfForm = partOfForm;
+		this.placement = placement;
 		this.questionNumber = questionNumber;
 		this.questionType = questionType;
 		this.form = form;
@@ -48,8 +51,8 @@ public class Question {
 	@Override
 	public String toString() {
 		return "Question [id=" + id + ", questionText=" + questionText + ", pageOnForm=" + pageOnForm + ", partOfForm="
-				+ partOfForm + ", questionNumber=" + questionNumber + ", questionType=" + questionType + ", form="
-				+ form + "]";
+				+ partOfForm + ", placement=" + placement + ", questionNumber=" + questionNumber + ", questionType="
+				+ questionType + ", form=" + form + "]";
 	}
 
 	/**
@@ -109,6 +112,20 @@ public class Question {
 	}
 
 	/**
+	 * @return the placement
+	 */
+	public String getPlacement() {
+		return placement;
+	}
+
+	/**
+	 * @param placement the placement to set
+	 */
+	public void setPlacement(String placement) {
+		this.placement = placement;
+	}
+
+	/**
 	 * @return the questionNumber
 	 */
 	public String getQuestionNumber() {
@@ -161,6 +178,7 @@ public class Question {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((pageOnForm == null) ? 0 : pageOnForm.hashCode());
 		result = prime * result + ((partOfForm == null) ? 0 : partOfForm.hashCode());
+		result = prime * result + ((placement == null) ? 0 : placement.hashCode());
 		result = prime * result + ((questionNumber == null) ? 0 : questionNumber.hashCode());
 		result = prime * result + ((questionText == null) ? 0 : questionText.hashCode());
 		result = prime * result + ((questionType == null) ? 0 : questionType.hashCode());
@@ -198,6 +216,11 @@ public class Question {
 			if (other.partOfForm != null)
 				return false;
 		} else if (!partOfForm.equals(other.partOfForm))
+			return false;
+		if (placement == null) {
+			if (other.placement != null)
+				return false;
+		} else if (!placement.equals(other.placement))
 			return false;
 		if (questionNumber == null) {
 			if (other.questionNumber != null)

@@ -14,7 +14,6 @@ public class Response {
 	@Id
 	private String id;
 	private String response;
-	private String placement;
 	
 	private Applicant applicant;
 	
@@ -29,17 +28,15 @@ public class Response {
 	/**
 	 * @param id
 	 * @param response
-	 * @param placement
 	 * @param applicant
 	 * @param question
 	 * @param submission
 	 */
-	public Response(String id, String response, String placement, Applicant applicant, Question question,
+	public Response(String id, String response, Applicant applicant, Question question,
 			Submission submission) {
 		super();
 		this.id = id;
 		this.response = response;
-		this.placement = placement;
 		this.applicant = applicant;
 		this.question = question;
 		this.submission = submission;
@@ -50,7 +47,7 @@ public class Response {
 	 */
 	@Override
 	public String toString() {
-		return "Response [id=" + id + ", response=" + response + ", placement=" + placement + ", applicant=" + applicant
+		return "Response [id=" + id + ", response=" + response + ", applicant=" + applicant
 				+ ", question=" + question + ", submission=" + submission + "]";
 	}
 
@@ -80,20 +77,6 @@ public class Response {
 	 */
 	public void setResponse(String response) {
 		this.response = response;
-	}
-
-	/**
-	 * @return the placement
-	 */
-	public String getPlacement() {
-		return placement;
-	}
-
-	/**
-	 * @param placement the placement to set
-	 */
-	public void setPlacement(String placement) {
-		this.placement = placement;
 	}
 
 	/**
@@ -147,7 +130,6 @@ public class Response {
 		int result = 1;
 		result = prime * result + ((applicant == null) ? 0 : applicant.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((placement == null) ? 0 : placement.hashCode());
 		result = prime * result + ((question == null) ? 0 : question.hashCode());
 		result = prime * result + ((response == null) ? 0 : response.hashCode());
 		result = prime * result + ((submission == null) ? 0 : submission.hashCode());
@@ -175,11 +157,6 @@ public class Response {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (placement == null) {
-			if (other.placement != null)
-				return false;
-		} else if (!placement.equals(other.placement))
 			return false;
 		if (question == null) {
 			if (other.question != null)

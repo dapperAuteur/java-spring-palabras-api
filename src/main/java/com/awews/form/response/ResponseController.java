@@ -26,22 +26,23 @@ public class ResponseController {
 		return responseService.getAllResponsesByQuestion(id);
 	}
 	
-	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/submissions/{id}/responses")
-	public List<Response> getAllResponsesBySubmission(@PathVariable String id) {
-		return responseService.getAllResponsesBySubmission(id);
-	}
+//	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/submissions/{id}/responses")
+//	public List<Response> getAllResponsesBySubmission(@PathVariable String id) {
+//		return responseService.getAllResponsesBySubmission(id);
+//	}
 	
 	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/applicants/{applicantId}/responses/{id}")
 	public Response getResponseById(@PathVariable String id) {
 		return responseService.getResponseById(id);
 	}
 	
-	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/applicants/{applicantId}/responses")
-	public Response addResponse(@RequestBody Response response, @PathVariable String applicantId) {
-		response.setApplicant(new Applicant(applicantId, "", "", "", "", "", "", "", "", "", ""));
-		responseService.addResponse(response);
-		return response;
-	}
+//	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/applicants/{applicantId}/responses")
+//	public Response addResponse(@RequestBody Response response, @PathVariable String applicantId) {
+//		response.setApplicant(new Applicant(applicantId, "", "", "", "", "", "", "", "", "", ""));
+//		response.setQuestion(question);
+//		responseService.addResponse(response);
+//		return response;
+//	}
 	
 	@RequestMapping(method=RequestMethod.PUT, value="/api/ver0001/applicants/{applicantId}/responses/{id}")
 	public Response updateResponse(@RequestBody Response response, @PathVariable String applicantId, @PathVariable String id) {

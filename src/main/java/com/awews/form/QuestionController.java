@@ -14,11 +14,6 @@ public class QuestionController {
 	@Autowired
 	private QuestionService questionService;
 	
-//	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/forms/{id}/questions")
-//	public List<Question> getAllQuestions(@PathVariable String id) {
-//		return questionService.getAllQuestions(id);
-//	}
-	
 	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/forms/{formId}/questions")
 	public List<Question> getQuestionsByFormId(@PathVariable String formId) {
 		return questionService.getQuestionsByFormId(formId);
@@ -33,12 +28,6 @@ public class QuestionController {
 	public Question getQuestionById(@PathVariable String id) {
 		return questionService.getQuestionById(id);
 	}
-	
-	// not working
-//	@RequestMapping(method=RequestMethod.GET, value="/api/ver0001/forms/{id}/questions/name/{questionSlug}")
-//	public Question getQuestionByQuestionSlug(@PathVariable String questionSlug) {
-//		return questionService.getQuestionByQuestionSlug(questionSlug);
-//	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/api/ver0001/forms/{formId}/questions")
 	public Question addQuestion(@RequestBody Question question, @PathVariable String formId) {

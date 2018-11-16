@@ -3,6 +3,10 @@ package com.awews.language.translation;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.awews.form.Form;
+import com.awews.form.Question;
+import com.awews.language.Language;
+
 @Document(collection = "translations")
 public class Translation {
 	

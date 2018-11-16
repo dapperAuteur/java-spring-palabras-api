@@ -6,6 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.awews.form.Question;
+import com.awews.person.Applicant;
+
 @Service
 public class ResponseService {
 	@Autowired
@@ -13,24 +16,26 @@ public class ResponseService {
 	
 	public List<Response> getAllResponsesByApplicant(String applicantId) {
 		List<Response> responses = new ArrayList<>();
-		responseRepository.findByApplicantId(applicantId)
+		Applicant applicant = new Applicant(applicantId, "", "", "", "", "", "", "", "", "", "");
+		responseRepository.findByApplicant(applicant)
 			.forEach(responses::add);
 		return responses;
 	}
 	
 	public List<Response> getAllResponsesByQuestion(String questionId) {
 		List<Response> responses = new ArrayList<>();
-		responseRepository.findByQuestionId(questionId)
+		Question question = new Question(questionId, "", "", "", "", "", null, null);
+		responseRepository.findByQuestion(question)
 			.forEach(responses::add);
 		return responses;
 	}
 	
-	public List<Response> getAllResponsesBySubmission(String submissionId) {
-		List<Response> responses = new ArrayList<>();
-		responseRepository.findBySubmissionId(submissionId)
-			.forEach(responses::add);
-		return responses;
-	}
+//	public List<Response> getAllResponsesBySubmission(String submissionId) {
+//		List<Response> responses = new ArrayList<>();
+//		responseRepository.findBySubmissionId(submissionId)
+//			.forEach(responses::add);
+//		return responses;
+//	}
 	
 	public Response getResponseById(String id) {
 		return responseRepository.findOne(id);
