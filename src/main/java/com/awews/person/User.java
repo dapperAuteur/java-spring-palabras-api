@@ -9,7 +9,7 @@ public class User {
 	@Id
 	private String id;
 	private String email;
-	private String userName;
+	private String username;
 	private Integer role;
 	private String password;
 	private String profileImageUrl;
@@ -21,16 +21,16 @@ public class User {
 	/**
 	 * @param id
 	 * @param email
-	 * @param userName
+	 * @param username
 	 * @param role
 	 * @param password
 	 * @param profileImageUrl
 	 */
-	public User(String id, String email, String userName, Integer role, String password, String profileImageUrl) {
+	public User(String id, String email, String username, Integer role, String password, String profileImageUrl) {
 		super();
 		this.id = id;
 		this.email = email;
-		this.userName = userName;
+		this.username = username;
 		this.role = role;
 		this.password = password;
 		this.profileImageUrl = profileImageUrl;
@@ -41,7 +41,7 @@ public class User {
 	 */
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", userName=" + userName + ", role=" + role + ", password="
+		return "User [id=" + id + ", email=" + email + ", username=" + username + ", role=" + role + ", password="
 				+ password + ", profileImageUrl=" + profileImageUrl + "]";
 	}
 
@@ -74,17 +74,17 @@ public class User {
 	}
 
 	/**
-	 * @return the userName
+	 * @return the username
 	 */
 	public String getUserName() {
-		return userName;
+		return username;
 	}
 
 	/**
-	 * @param userName the userName to set
+	 * @param username the username to set
 	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUserName(String username) {
+		this.username = username;
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class User {
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((profileImageUrl == null) ? 0 : profileImageUrl.hashCode());
 		result = prime * result + ((role == null) ? 0 : role.hashCode());
-		result = prime * result + ((userName == null) ? 0 : userName.hashCode());
+		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
 
@@ -182,10 +182,10 @@ public class User {
 				return false;
 		} else if (!role.equals(other.role))
 			return false;
-		if (userName == null) {
-			if (other.userName != null)
+		if (username == null) {
+			if (other.username != null)
 				return false;
-		} else if (!userName.equals(other.userName))
+		} else if (!username.equals(other.username))
 			return false;
 		return true;
 	}

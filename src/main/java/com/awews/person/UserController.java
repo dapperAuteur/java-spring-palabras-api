@@ -24,6 +24,11 @@ public class UserController {
 		return userService.getUserById(id);
 	}
 	
+	@RequestMapping("/api/ver0001/users/username/{username}")
+	public User getUserByUsername(@PathVariable String username) {
+		return userService.getUserByUsername(username);
+	}
+	
 	@RequestMapping("/api/ver0001/users/email/{emailSlug}")
 	public User getUserByEmailSlug(@PathVariable String emailSlug) {
 		return userService.getUserByEmailSlug(emailSlug);
